@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raunak Chakravarty - Lead Agentic AI Developer Resume</title>
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --text-color: #2c3e50;
+            --primary-color: #1a365d; /* Deep Slate Blue */
+            --accent-color: #008080;  /* Cyber Teal */
+            --light-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: var(--light-bg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Header Block */
+        header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 40px;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            letter-spacing: -0.5px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(255,255,255,0.5);
+        }
+
+        .contact-info a:hover {
+            color: #cbd5e1;
+        }
+
+        {% comment %} .status-badge {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        } {% endcomment %}
+
+        /* Summary Section */
+        .summary-section {
+            padding: 30px 40px 10px 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Main Dashboard Grid */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            padding: 30px 40px 40px 40px;
+        }
+
+        @media (max-width: 850px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .status-badge {
+                position: static;
+                display: inline-block;
+                margin-top: 15px;
+            }
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 12px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        /* Timeline / Experience Elements */
+        .job-card {
+            margin-bottom: 25px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .job-title h3 {
+            font-size: 1.15rem;
+            color: #1e293b;
+        }
+
+        .company {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .job-meta {
+            text-align: right;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+            font-size: 0.95rem;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Metric Highlight Callouts */
+        .metric-callout {
+            background-color: #f0fdfa;
+            border-left: 3px solid var(--accent-color);
+            padding: 8px 12px;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+
+        /* Right Sidebar Cards */
+        .sidebar-card {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        /* Tag Cloud Elements */
+        .tag-group {
+            margin-bottom: 15px;
+        }
+
+        .tag-label {
+            font-weight: bold;
+            font-size: 0.85rem;
+            color: #475569;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            background-color: #e2e8f0;
+            color: #334155;
+            font-size: 0.8rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        /* Simple Typography Formatting for Architecture Details */
+        .sub-project {
+            margin-top: 10px;
+            padding-left: 10px;
+            border-left: 2px solid #cbd5e1;
+        }
+
+        .sub-project p {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        .meta-logo {
+        height: 1.1em;           
+        vertical-align: middle;  
+        margin-left: 6px;        
+        display: inline-block;
+        }
+        .optum-logo {
+            height: 3.0em;
+            width: auto;
+            vertical-align: middle;
+            margin-left: 6px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="resume-container">
+    
+    <!-- Header Block -->
+    <header>
+        <div class="header-content">
+            <h1>Raunak Chakravarty</h1>
+            <div class="subtitle">Lead Agentic AI Developer</div>
+            <div class="contact-info">
+                <span> +91 7903212858</span>
+                <span> <a href="mailto:raunaakchakravarty@gmail.com">raunaakchakravarty@gmail.com</a></span>
+                <span> <a href="https://www.linkedin.com/in/raunak-chakravarty-57508a158/" target="_blank">linkedin.com/in/raunak-chakravarty</a></span>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- Summary Section -->
+    <div class="summary-section">
+    <p>Highly motivated Lead Agentic AI Developer with 5 years of experience specializing in the Design, Developement, and Deployment of production grade autonomous agent systems. Expert in building scalable multi agent workflows using LangGraph, Google Gemini API, and Model Context Protocol (MCP) to automate complex enterprise and engineering operations. Core competencies include engineering multimodal evaluation pipelines, implementing human-in-the-loop (RLHF) feedback loops, optimizing LLM token context windows, and building production Cloud Run/PostgreSQL backends. Proficient in Python, LangGraph, PySpark, Flask, React, and cloud native agentic AI architectures.</p>
+    </div>
+
+    <!-- Main Content Layout Structure -->
+    <div class="main-layout">
+        
+        <!-- Left Column: Primary Chronological Stream (Highly ATS Friendly) -->
+        <main>
+            <section id="experience">
+                <h2>Experience</h2>
+
+                
+                <!-- Job Card 1 -->
+                <article class="job-card">
+                    <div class="job-header">
+                        <div class="job-title">
+                            <h3>Lead Agentic AI Developer — <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta Logo" class="meta-logo"></h3>
+                            <span class="company">Persistent Systems</span>
+                        </div>
+                        <div class="job-meta">
+                            <div>Jan 2026 – Present</div>
+                            <div>Kolkata, India</div>
+                        </div>
+                    </div>
+                        <ul>
+                            <li>Worked on development of a 4-agent LangGraph preprocessing pipeline (Extraction → Tagging → Clustering → Mapping) using Google Gemini LLM to pre-filter irrelevant submittal pages, reducing Gemini API token costs and maximizing evaluation accuracy.</li>
+                            <li>Engineered a multimodal evaluation pipeline integrating Google Gemini API with configurable thinking budgets, temperature control, structured JSON schema responses, Google Search grounding, and PDF/image upload support.</li>
+                            <li>Designed a Reasoning Agent and multi-pass CDD section extraction engine with cross reference resolution to consolidate multi batch evaluations across 2,000–3,000 electrical circuit diagrams with sentence level deduplication and structured JSON hierarchy outputs.</li>
+                            <li>Developed a 12-stage chunked Inconsistency Detection Pipeline performing per chunk fact extraction, cross chunk inconsistency detection, global fact indexing, severity classification, and structured report generation using Gemini API with exponential backoff and retry logic.</li>
+                            <li>Worked on high-performance parallel image evaluation engine with rate-limit-aware group scheduling, dynamic worker calculation, and multi core scaling up to 32 workers adapting to CPU, RAM, and I/O load.</li>
+                            <li class="metric-callout">Achieved a 52% reduction in token consumption (1,078 → 516 tokens/image) by developing a circuit image optimization pipeline using LANCZOS resampling and contrast enhancement while fully preserving PCB trace readability.</li>
+                            <li>Implemented a two-track SME feedback and RLHF-style system featuring hard status overrides and soft context injection with full audit trails and idempotency guarantees to close the human-in-the-loop cycle.</li>
+                            <li>Developed an AI Suggestion Engine generating context-aware, confidence-scored reviewer suggestions alongside a feedback incorporation overlay in the report UI to assist SMEs in justifying and applying corrections to AI decisions.</li>
+                            <li>Engineered a resilient LLM runtime layer incorporating a token-budget-aware SOP truncation function for 1M-token context window compliance, dynamic batch-size estimation, and a custom fallback layer to prevent pipeline stalls.</li>
+                            <li>Created a per-sub-batch missing metric retry mechanism and appendix context precomputation module, running appendix analysis once per job to eliminate duplicate vision calls and significantly lower evaluation latency.</li>
+                            <li>Built a robust multi-format document processing engine using PyMuPDF and `python-docx` for PDF/DOCX submittals with blank-page filtering, CDE extraction via Gemini vision, and CSI specification document cross source compliance evaluation.</li>
+                        </ul>
+                </article>
+
+                <!-- Job Card 2 -->
+                <article class="job-card">
+                    <div class="job-header">
+                        <div class="job-title">
+                            <h3>Lead Agentic AI Developer — <img src="C:\Users\Raunak Chakravarty\Downloads\optumlogo.jpg" alt="Optum Logo" class="optum-logo"></h3>
+                            <span class="company">Persistent Systems</span>
+                        </div>
+                        <div class="job-meta">
+                            <div>Feb 2025 – Dec 2025</div>
+                            <div>Kolkata, India</div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Enabled advanced Semantic and Vector Search capabilities for OCR data using Azure Search.</li>
+                        <li>Implemented Semantic Search leveraging Sentence BERT for dense embeddings and FAISS for high performance similarity search over unstructured paragraph data.</li>
+                        <li>Parsed and preprocessed .docx files using python docx, segmented content into searchable chunks, and embedded them for vector based retrieval.</li>
+                        <li>Developed a FastAPI-based backend for uploading, indexing, searching, downloading, and performing Semantic search using Azure Cognitive Search and Azure Blob Storage.</li>
+                        <li>Implemented secure, multi tenant storage and retrieval of JSON files in Azure Blob Storage with case based Organization.</li>
+                        <li>Ensured clear API Documentation and consistent UI for all endpoints using OpenAPI/Swagger.</li>
+                    </ul>
+                </article>
+
+
+                <!-- Job Card 3 -->
+                <article class="job-card">
+                    <div class="job-header">
+                        <div class="job-title">
+                            <h3>System Engineer</h3>
+                            <span class="company">Tata Consultancy Services</span>
+                        </div>
+                        <div class="job-meta">
+                            <div>Jan 2022 – Nov 2024</div>
+                            <div>Kolkata, India</div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Designed and maintained scalable ETL pipelines using PySpark and Airflow, integrating data from multiple sources like SQL, MongoDB, and APIs.</li>
+                        <li>Optimized real-time data ingestion processes with Kafka, enabling seamless processing of high-velocity data streams.</li>
+                        <li>Enhanced data quality using open-source libraries (e.g, Great Expectations) and implemented data masking to ensure compliance with security standards.</li>
+                        <li>Developed automation scripts in Python for data pipeline monitoring, error detection, and system reporting.</li>
+                        <li>Managed data warehousing solutions on AWS S3 and Snowflake, streamlining data storage and retrieval for analytics.</li>
+                        <li>Worked on Unified Functional Testing and UFT One application to automate tests on the User Interface.</li>
+                    </ul>
+                </article>
+
+                <!-- Job Card 4 -->
+                <article class="job-card">
+                    <div class="job-header">
+                        <div class="job-title">
+                            <h3>Mentor</h3>
+                            <span class="company">GeeksforGeeks</span>
+                        </div>
+                        <div class="job-meta">
+                            <div>Feb 2021 – Aug 2021</div>
+                            <div>Noida, Uttar Pradesh, India</div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Designed and recorded a data engineering course, covering ETL processes, database design, and Big Data tools like Hadoop and Spark.</li>
+                        <li>Guided learners through practical projects, focusing on data processing with PySpark and SQL optimization techniques.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Projects Deep Dive Section -->
+            <section id="projects">
+                <h2>Featured Projects</h2>
+                <article class="job-card">
+                    <div class="job-header">
+                        <div class="job-title">
+                            <h3>Smart CarePlanner using AgenticAI</h3>
+                            <span class="company">Personal Project</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.95rem; margin-bottom: 10px;"><strong>SUMMARY:</strong> Smart Care Planner AI-assisted care plan generator that ingests clinical documents, highlights evidence, and produces structured care plans via a full-stack Flask + React (Vite/TypeScript) application.</p>
+                    
+                    <div class="sub-project">
+                        <p><strong>Backend:</strong> Designed Flask APIs for upload, background processing, evidence preview, and downloads; handled CORS, SPA fallback, and health checks.</p>
+                        <p><strong>NLP/RAG:</strong> Integrated Sentence Transformers + FAISS for retrieval; orchestrated LLM-based synthesis of care plans with citation mapping to source passages.</p>
+                        <p><strong>Document processing:</strong> Generated color-coded HTML highlights and PDF annotations using PyMuPDF; served assets with lightweight caching.</p>
+                        <p><strong>Frontend:</strong> Built a React Vite TypeScript SPA with React Router, Axios interceptors, theme-aware CSS variables, and skeleton loaders.</p>
+                        <p><strong>Dev experience:</strong> Resolved port conflicts, added SPA refresh fallback, and standardized proxy configuration for consistent local development.</p>
+                        <p><strong>Tech Stack:</strong> Python (Flask), React, Vite, TypeScript, Axios, CSS Modules, PyMuPDF, Sentence Transformers, FAISS, JSON, JWT/token auth, SPA routing.</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <!-- Right Side: Secondary Meta Information (Skills, Education, Credentials) -->
+        <aside>
+            <!-- Technical Skills Card -->
+            <section class="sidebar-card" id="skills">
+                <h3>Technical Skills</h3>
+                
+                <div class="tag-group">
+                    <span class="tag-label">GenAI & Core AI Engineering</span>
+                    <div class="tags">
+                        <span class="tag">LLM Architecture</span><span class="tag">Transformers</span><span class="tag">AgenticAI</span>
+                        <span class="tag">Multimodal AI Evaluation</span><span class="tag">Semantic Search</span>
+                        <span class="tag">RAG Pipelines</span><span class="tag">Prompt Engineering</span>
+                        <span class="tag">Google Search Grounding</span><span class="tag">Citation Extraction</span>
+                    </div>
+                </div>
+
+                <div class="tag-group">
+                    <span class="tag-label">Agentic Frameworks & LLM Ops</span>
+                    <div class="tags">
+                        <span class="tag">Agent Orchestration</span><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">Prompt Engineering</span>
+                        <span class="tag">Function Calling</span><span class="tag">Chain-of-Thought (CoT)</span>
+                        <span class="tag">Batched LLM Inference</span><span class="tag">Human-in-the-Loop AI</span>
+                    </div>
+                </div>
+
+                <div class="tag-group">
+                    <span class="tag-label">Programming</span>
+                    <div class="tags"><span class="tag">Python</span></div>
+                </div>
+
+                <div class="tag-group">
+                    <span class="tag-label">Frameworks & Libraries</span>
+                    <div class="tags">
+                        <span class="tag">PySpark</span><span class="tag">Pandas</span><span class="tag">Flask</span>
+                        <span class="tag">FastAPI</span><span class="tag">PyMuPDF</span><span class="tag">OpenCV</span>
+                        <span class="tag">Pillow</span><span class="tag">NumPy</span><span class="tag">pdf2image</span>
+                        <span class="tag">python-docx</span><span class="tag">openpyxl</span><span class="tag">ocrmypdf</span>
+                        <span class="tag">pytesseract</span><span class="tag">PyYAML</span>
+                    </div>
+                </div>
+
+                <div class="tag-group">
+                    <span class="tag-label">Vector Search, OCR & Storage</span>
+                    <div class="tags">
+                        <span class="tag">FAISS</span><span class="tag">Sentence Transformers</span>
+                        <span class="tag">OCR Pipelines</span><span class="tag">Image Enhancement</span>
+                        <span class="tag">Document Intelligence</span><span class="tag">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <div class="tag-group">
+                    <span class="tag-label">Databases & Cloud</span>
+                    <div class="tags">
+                        <span class="tag">VectorDB</span><span class="tag">SQL</span><span class="tag">Azure</span>
+                    </div>
+                </div>
+
+                <div class="tag-group">
+                    <span class="tag-label">Expertise & Tools</span>
+                    <div class="tags">
+                        <span class="tag">Git</span><span class="tag">Bitbucket</span><span class="tag">ETL Pipelines</span>
+                        <span class="tag">High-volume Document Automation</span><span class="tag">Parallel Processing</span>
+                        <span class="tag">Workflow Orchestration</span><span class="tag">Multi-threading/Processing</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications Card -->
+            <section class="sidebar-card" id="certifications">
+                <h3>Certifications</h3>
+                <ul style="margin-left: 15px; font-size: 0.9rem;">
+                    <li>Databricks Generative AI Associate Certificate</li>
+                    <li>Dataiku Generative AI Practitioner Certificate</li>
+                    <li>Microsoft Azure AI Fundamentals Certificate</li>
+                    <li>NVIDIA AI Technical Curriculum (2025)</li>
+                </ul>
+            </section>
+
+            <!-- Education Card -->
+            <section class="sidebar-card" id="education">
+                <h3>Education</h3>
+                <p style="font-weight: bold; font-size: 0.95rem;">College of Engineering and Management, Kolaghat</p>
+                <p style="font-size: 0.9rem; color: #475569;">Bachelor of Technology in Information Technology</p>
+                <p style="font-size: 0.85rem; color: #64748b;">Aug 2017 – July 2021</p>
+                <div class="metric-callout" style="margin-top: 5px; font-size: 0.9rem; padding: 4px 8px;">
+                    Aggregate: 8.25 CGPA
+                </div>
+            </section>
+
+            <!-- Achievements Card -->
+            <section class="sidebar-card" id="achievements">
+                <h3>Achievements</h3>
+                <ul style="margin-left: 15px; font-size: 0.9rem;">
+                    <li>Earned Client Recognition for excellence in delivery.</li>
+                    <li>1st Prize at Robo Liga: Designed a soccer robot.</li>
+                    <li>3rd Prize at Robo Ignitors: Navigated complex tracks.</li>
+                </ul>
+            </section>
+
+            <!-- Interests Card -->
+            <section class="sidebar-card" id="interests">
+                <h3>Interests</h3>
+                <p style="font-size: 0.9rem; color: #475569;">Data Science, Continuous Learning, AgenticAI, GenAI</p>
+            </section>
+            <!-- Awards Card -->
+            <section class="sidebar-card" id="Achievements">
+                <h3>Awards</h3>
+                <ul style="font-size: 0.9rem; color: #475569; padding-left: 1.2rem; margin: 0;">
+                    <li><strong>Persistent Annual Award (AI Trailblazer):</strong> Awarded for driving innovation in data center design automation using multi-agent AI systems.</li>
+                    <li><strong>Persistent Bravo Award:</strong> Recognized for exceptional leadership in spearheading a company wide Certification Drive; while maintaining an 80% accuracy among participating associates.</li>
+                    <li><strong>Persistent High Five Award:</strong> Earned for leading the team to 18th place out of 1,500+ global teams in the Semicolon Hackathon.</li>
+                </ul>
+            </section>
+        </aside>
+
+    </div>
+</div>
+
+</body>
+</html>
